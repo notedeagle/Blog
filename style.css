@@ -1,0 +1,77 @@
+#menu {
+    border-bottom: 1px solid white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+#menu li {
+    float: left;
+    border-right: 1px solid white;
+}
+
+#menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background-color: #111;
+}
+
+#menu .active {
+    background-color: #292929;
+}
+
+#naglowek {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 20px;
+}
+
+#wpis {
+    color: white;
+    background-color: #515151;
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+#wpis article {
+    border-bottom: 1px solid white;
+}
+
+#pasekBoczny {
+    float: right;
+    width: 20%;
+    background-color: grey;
+    border-left: 1px solid white;
+    box-sizing: border-box;
+}
+
+#pasekBoczny article {
+    border-bottom: 1px solid white;
+}
+
+#stopka {
+    clear: both;
+}
+
+
+
+
+
+
+
