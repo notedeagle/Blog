@@ -53,7 +53,7 @@
             <p>Data/Godzina: <span id="datetime"></span></p>
 
             <script>
-                var dt = new Date();
+                let dt = new Date();
                 document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
             </script>
         </article>
@@ -83,6 +83,24 @@
                 wpisów
             </p>
         </article>
+    </section>
+
+    <section id="komentarze">
+        <header>
+            <h2>Dodaj komentarz</h2>
+            <form action="action.php" method="post" target="_blank">
+                Nick: <label>
+                    <input type="text" name="nick">
+                </label><br>
+                E-mail: <label>
+                    <input type="email" name="email">
+                </label><br>
+                Treść: <label>
+                    <input type="text" name="tekst">
+                </label><br>
+                <input type="submit" value="Wyślij" name="wyslij"/>
+            </form>
+        </header>
     </section>
 
     <footer id="stopka">

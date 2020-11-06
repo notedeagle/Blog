@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1ix5F2H7IXNAAzbePJ4Yr1VNTVx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,6 +68,7 @@
       <workItem from="1602836302442" duration="144000" />
       <workItem from="1602927944755" duration="13060000" />
       <workItem from="1603613031058" duration="1774000" />
+      <workItem from="1604694142302" duration="2388000" />
     </task>
     <servers />
   </component>
@@ -83,15 +85,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1389" y="254" key="#PHP" timestamp="1603613584404">
-      <screen x="0" y="0" width="2234" height="1216" />
-    </state>
-    <state x="1389" y="254" key="#PHP/0.0.2234.1216@0.0.2234.1216" timestamp="1603613584404" />
-    <state x="543" y="380" key="NewPhpFileDialog" timestamp="1602928021261">
+    <state x="465" y="91" key="#CLI_Interpreters" timestamp="1604696026366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="543" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1602928021261" />
+    <state x="465" y="91" key="#CLI_Interpreters/0.0.1440.900@0.0.1440.900" timestamp="1604696026366" />
+    <state x="825" y="188" key="#PHP" timestamp="1604696027369">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="825" y="188" key="#PHP/0.0.1440.900@0.0.1440.900" timestamp="1604696027369" />
+    <state x="1389" y="254" key="#PHP/0.0.2234.1216@0.0.2234.1216" timestamp="1603613584404" />
+    <state x="543" y="380" key="NewPhpFileDialog" timestamp="1604696373621">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="543" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1604696373621" />
   </component>
 </project>
