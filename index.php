@@ -1,5 +1,49 @@
+<?php
+
+$nickErr = $emailErr = $tekstErr = "";
+$nick = $email = $tekst = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["nick"])) {
+        $nickErr = "Nick jest wymagany";
+    } else {
+        $nick = input_data($_POST["nick"]);
+
+        if (!preg_match("/^[a-zA-Z0-9]*$/", $nick)) {
+            $nickErr = "Nick może się składać tylko z liter i cyfr";
+        }
+    }
+
+    if (empty($_POST["email"])) {
+        $emailErr = "Email jest wymagany";
+    } else {
+        $email = input_data($_POST["email"]);
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Błędny email";
+        }
+    }
+
+    if (empty($_POST["tekst"])) {
+        $tekstErr = "Komentarz jest wymagany";
+    } else {
+        $tekst = input_data($_POST["tekst"]);
+    }
+}
+
+function input_data($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .error {color:red;}
+</style>
 <head>
     <meta charset="UTF-8">
     <title>Dawid Kluczewski</title>
@@ -88,17 +132,29 @@
     <section id="komentarze">
         <header>
             <h2>Dodaj komentarz</h2>
-            <form action="action.php" method="post" target="_blank">
-                Nick: <label>
+            <span class = "error">* wymagane pole</span>
+            <br><br>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                Nick:
+                <label>
                     <input type="text" name="nick">
-                </label><br>
-                E-mail: <label>
+                </label>
+                <span class="error">*<?php echo $nickErr;?></span>
+                <br><br>
+                Email:
+                <label>
                     <input type="email" name="email">
-                </label><br>
-                Treść: <label>
-                    <input type="text" name="tekst">
-                </label><br>
-                <input type="submit" value="Wyślij" name="wyslij"/>
+                </label>
+                <span class="error">*<?php echo $emailErr;?></span>
+                <br><br>
+                Treść:
+                <label>
+                    <textarea name="tekst" rows="5" cols="40"></textarea>
+                </label>
+                <span class="error">*<?php echo $tekstErr;?></span>
+                <br><br>
+                <input type="submit" name="potwierdz" value="Wyślij komentarz">
+                <br><br>
             </form>
         </header>
     </section>
