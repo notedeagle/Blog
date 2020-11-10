@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="">
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="better form">
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +68,18 @@
       <workItem from="1602836302442" duration="144000" />
       <workItem from="1602927944755" duration="13060000" />
       <workItem from="1603613031058" duration="1774000" />
-      <workItem from="1604760567543" duration="1048000" />
+      <workItem from="1604760567543" duration="1185000" />
+      <workItem from="1604940213931" duration="2701000" />
+      <workItem from="1605004164629" duration="2291000" />
     </task>
+    <task id="LOCAL-00001" summary="better form">
+      <created>1604762030654</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604762030654</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,14 +97,27 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="better form" />
+    <option name="LAST_COMMIT_MESSAGE" value="better form" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1389" y="254" key="#PHP" timestamp="1603613584404">
       <screen x="0" y="0" width="2234" height="1216" />
     </state>
     <state x="1389" y="254" key="#PHP/0.0.2234.1216@0.0.2234.1216" timestamp="1603613584404" />
-    <state x="543" y="380" key="NewPhpFileDialog" timestamp="1602928021261">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="842" y="513" key="NewPhpFileDialog" timestamp="1604940238357">
+      <screen x="0" y="0" width="2234" height="1216" />
     </state>
     <state x="543" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1602928021261" />
+    <state x="842" y="513" key="NewPhpFileDialog/0.0.2234.1216@0.0.2234.1216" timestamp="1604940238357" />
+    <state x="709" y="340" key="Vcs.Push.Dialog.v2" timestamp="1604762043619">
+      <screen x="0" y="0" width="2234" height="1216" />
+    </state>
+    <state x="709" y="340" key="Vcs.Push.Dialog.v2/0.0.2234.1216@0.0.2234.1216" timestamp="1604762043619" />
+    <state x="936" y="521" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604940221570">
+      <screen x="0" y="0" width="2234" height="1216" />
+    </state>
+    <state x="936" y="521" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2234.1216@0.0.2234.1216" timestamp="1604940221570" />
   </component>
 </project>

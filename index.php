@@ -1,44 +1,3 @@
-<?php
-
-$nickErr = $emailErr = $tekstErr = "";
-$nick = $email = $tekst = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["nick"])) {
-        $nickErr = "Nick jest wymagany";
-    } else {
-        $nick = input_data($_POST["nick"]);
-
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $nick)) {
-            $nickErr = "Nick może się składać tylko z liter i cyfr";
-        }
-    }
-
-    if (empty($_POST["email"])) {
-        $emailErr = "Email jest wymagany";
-    } else {
-        $email = input_data($_POST["email"]);
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Błędny email";
-        }
-    }
-
-    if (empty($_POST["tekst"])) {
-        $tekstErr = "Komentarz jest wymagany";
-    } else {
-        $tekst = input_data($_POST["tekst"]);
-    }
-}
-
-function input_data($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <style>
@@ -64,8 +23,52 @@ function input_data($data) {
         </ul>
     </nav>
 
+    <?php
+
+    if (isset($_GET['str'])) {
+        $nr_str = $_GET['str'];
+    }
+
+    if (!isset($nr_str)) {
+        echo ('<a href="index.php?str=1">Strona 2</a>');
+    } else if (isset($nr_str)) {
+        if ($nr_str == '1') {
+            echo ('<a href="index.php?str=2">Strona 2</a>');?>
+            <section id="wpis">
+                <article>
+                    <header>
+                        <h2>Tu coś kiedyś będzie :)</h2>
+                    </header>
+                    <section>
+                        <p>
+                            Tu też coś kiedyś będzie
+                        </p>
+                    </section>
+                </article>
+            </section>
+    <?php
+        } else {
+            echo ('<a href="index.php?str=3">Strona 3</a>');?>
+            <section id="wpis">
+                <article>
+                    <header>
+                        <h2>Tu też coś kiedyś będzie :)</h2>
+                    </header>
+                    <section>
+                        <p>
+            Tu też coś kiedyś będzie... chyba
+            </p>
+                    </section>
+                </article>
+            </section>
+    <?php
+        }
+    }
+    ?>
+
     <section id="wpis">
         <?php
+
         $tresc = 'Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst
                     Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst
                     Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst';
@@ -132,30 +135,26 @@ function input_data($data) {
     <section id="komentarze">
         <header>
             <h2>Dodaj komentarz</h2>
-            <span class = "error">* wymagane pole</span>
+            <span class = "error">Wszystkie pola są wymagane</span>
             <br><br>
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <form method="post" action="test.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 Nick:
                 <label>
                     <input type="text" name="nick">
                 </label>
-                <span class="error">*<?php echo $nickErr;?></span>
                 <br><br>
                 Email:
                 <label>
                     <input type="email" name="email">
                 </label>
-                <span class="error">*<?php echo $emailErr;?></span>
                 <br><br>
                 Treść:
                 <label>
                     <textarea name="tekst" rows="5" cols="40"></textarea>
                 </label>
-                <span class="error">*<?php echo $tekstErr;?></span>
                 <br><br>
                 <input type="submit" name="potwierdz" value="Wyślij komentarz">
                 <br><br>
-            </form>
         </header>
     </section>
 

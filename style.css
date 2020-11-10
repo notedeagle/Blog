@@ -69,6 +69,15 @@
     clear: both;
 }
 
+#komentarze {
+    float: right;
+    width: 20%;
+    background-color: grey;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+
 
 
 
