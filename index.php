@@ -3,6 +3,7 @@
 <style>
     .error {color:red;}
 </style>
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
 <head>
     <meta charset="UTF-8">
     <title>Dawid Kluczewski</title>
@@ -56,8 +57,8 @@
                     </header>
                     <section>
                         <p>
-            Tu też coś kiedyś będzie... chyba
-            </p>
+                            Tu też coś kiedyś będzie... chyba
+                        </p>
                     </section>
                 </article>
             </section>
@@ -153,13 +154,19 @@
                     <textarea name="tekst" rows="5" cols="40"></textarea>
                 </label>
                 <br><br>
+                <div class="g-recaptcha" data-sitekey="6Lcb3-EZAAAAAJjrPuqtPF6VdYhZgnQ1uo5OkW_d"></div>
                 <input type="submit" name="potwierdz" value="Wyślij komentarz">
                 <br><br>
         </header>
     </section>
-
     <footer id="stopka">
         <p>Dawid Kluczewski 2020</p>
     </footer>
 </body>
 </html>
+
+
+
+
+
+

@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $tekst = input_data($_POST["tekst"]);
     }
+
 }
 
 function input_data($data) {
@@ -35,6 +36,26 @@ function input_data($data) {
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+}
+
+if(isset($_POST['g-recaptcha-response'])){
+    $captcha=$_POST['g-recaptcha-response'];
+}
+if(!$captcha){
+    echo '<h2>Please check the the captcha form.</h2>';
+    exit;
+}
+$secretKey = "6Lcb3-EZAAAAACDOrPSwLbNoGXlysdImMDrNJ2TW";
+$ip = $_SERVER['REMOTE_ADDR'];
+// post request to server
+$url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+$response = file_get_contents($url);
+$responseKeys = json_decode($response,true);
+// should return JSON with success as true
+if($responseKeys["success"]) {
+    echo '<h2>Komentarz dodany</h2>';
+} else {
+    echo '<h2>Ić stont bocie</h2>';
 }
 
 ?>
