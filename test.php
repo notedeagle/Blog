@@ -51,11 +51,9 @@ if(!$captcha){
 }
 $secretKey = "6Lcb3-EZAAAAACDOrPSwLbNoGXlysdImMDrNJ2TW";
 $ip = $_SERVER['REMOTE_ADDR'];
-// post request to server
 $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
 $response = file_get_contents($url);
 $responseKeys = json_decode($response,true);
-// should return JSON with success as true
 if($responseKeys["success"]) {
     echo '<h2>Komentarz dodany</h2>';
 } else {

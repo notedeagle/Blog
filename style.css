@@ -69,13 +69,53 @@
     clear: both;
 }
 
-#komentarze {
-    float: right;
-    width: 20%;
-    background-color: grey;
-    border: 1px solid white;
-    box-sizing: border-box;
+#gra {
+    margin: auto;
 }
+
+#przyciski {
+    width: 265px;
+    margin: auto;
+    background: #292929;
+}
+
+#przyciski a {
+    width: 100px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+#wynik {
+    border: 1px solid white;
+    color: white;
+    width: 265px;
+    margin: auto;
+    background: #292929;
+}
+
+#wygral {
+    border: 1px solid white;
+    color: white;
+    width: 265px;
+    margin: auto;
+    background: #292929;
+}
+
+#wygral a {
+    width: 100px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+
 
 
 

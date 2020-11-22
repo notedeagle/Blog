@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="decription" content="Mój blog">
+<meta name="keywords” content=" blog, lifestyle, Dawid, Kluczewski, informatyka”>
+<meta name="author" content="Dawid Kluczewski">
 <style>
     .error {color:red;}
 </style>
@@ -16,10 +19,11 @@
 
     <nav id="menu">
         <ul>
-            <li><a class="active" href="#">Strona główna</a></li>
+            <li><a class="active" href="index.php">Strona główna</a></li>
             <li><a href="#">Wpisy</a> </li>
             <li><a href="#">Edukacja</a></li>
             <li><a href="#">GitHub</a></li>
+            <li><a href="game.php">Gra</a></li>
             <li style="float:right"><a href="#">O mnie</a></li>
         </ul>
     </nav>
@@ -131,14 +135,12 @@
                 wpisów
             </p>
         </article>
-    </section>
-
-    <section id="komentarze">
-        <header>
-            <h2>Dodaj komentarz</h2>
-            <span class = "error">Wszystkie pola są wymagane</span>
-            <br><br>
-            <form method="post" action="test.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <section id="komentarze">
+            <header>
+                <h2>Dodaj komentarz</h2>
+                <span class = "error">Wszystkie pola są wymagane</span>
+                <br><br>
+                <form method="post" action="test.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 Nick:
                 <label>
                     <input type="text" name="nick">
@@ -157,7 +159,8 @@
                 <div class="g-recaptcha" data-sitekey="6Lcb3-EZAAAAAJjrPuqtPF6VdYhZgnQ1uo5OkW_d"></div>
                 <input type="submit" name="potwierdz" value="Wyślij komentarz">
                 <br><br>
-        </header>
+            </header>
+        </section>
     </section>
     <footer id="stopka">
         <p>Dawid Kluczewski 2020</p>
