@@ -63,7 +63,7 @@ class obliczenie {
     public static function wynik(array $numery) {
         $total = 0;
         foreach ($numery as $numer) {
-            $wartosc = explode('-', $numer)[1];
+            $wartosc = explode(' - ', $numer)[0];
             if (is_numeric($wartosc)) {
                 $total += $wartosc;
             }
