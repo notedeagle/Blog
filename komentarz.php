@@ -14,18 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($_POST["email"])) {
-        echo "<span style=\"color:red;\">Email jest wymagany<br></span>";
-
-    } else {
-        $email = input_data($_POST["email"]);
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "<span style=\"color:red;\">Błędny email<br></span>";
-
-        }
-    }
-
     if (empty($_POST["tekst"])) {
         echo "<span style=\"color:red;\">Komentarz jest wymagany<br></span>";
 
@@ -55,7 +43,24 @@ $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($se
 $response = file_get_contents($url);
 $responseKeys = json_decode($response,true);
 if($responseKeys["success"]) {
-    echo '<h2>Komentarz dodany</h2>';
+    session_start();
+
+    echo ('<form action="#" method="post">');
+    $_SESSION['tekst'] = $_POST['tekst'];
+    $_SESSION['nick'] = $_POST['nick'];
+    $nickname = $_SESSION['nick'];
+    $tresc = $_SESSION['tekst'];
+    $znaczniki = array('[b]' ,'[/b]', '[i]','[/i]', '[u]','[/u]','[quote]','[/quote]','[s]', '[/s]');
+    $noweZnaczniki = array('<strong>','</strong>','<i>', '</i>','<u>','</u>','<q>','</q>', '<s>', '</s>');
+
+    $trescZmieniona = str_replace($znaczniki, $noweZnaczniki, $tresc) ;
+
+    echo ('
+    <p>Nick: ' . $nickname . '</p>
+    <p>Treść komentarza: ' . $trescZmieniona . '</p>
+    <a href="#">Dodaj komentarz</a>
+    <a href="index.php">Edytuj komentarz</a>
+    ');
 } else {
     echo '<h2>Ić stont bocie</h2>';
 }

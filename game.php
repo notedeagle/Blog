@@ -182,7 +182,7 @@ if (!isset($_GET['akcja'])) {
             <h2>Dodaj komentarz</h2>
             <span class = "error">Wszystkie pola są wymagane</span>
             <br><br>
-            <form method="post" action="test.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <form method="post" action="komentarz.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             Nick:
             <label>
                 <input type="text" name="nick">
