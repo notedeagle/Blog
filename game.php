@@ -17,16 +17,9 @@
     <p>Tu jest naglowek</p>
 </header>
 
-<nav id="menu">
-    <ul>
-        <li><a class="active" href="index.php">Strona główna</a></li>
-        <li><a href="#">Wpisy</a> </li>
-        <li><a href="#">Edukacja</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="game.php">Gra</a></li>
-        <li style="float:right"><a href="#">O mnie</a></li>
-    </ul>
-</nav>
+<?php
+include "menu.php";
+?>
 <section id="gra">
 <?php
 Class gra
@@ -152,61 +145,7 @@ if (!isset($_GET['akcja'])) {
         </script>
     </article>
 
-    <article id="link">
-        <header>
-            <h2>Tu mnie znajdziesz</h2>
-        </header>
-        <p>
-            <a href="#">Github</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">E-mail</a>
-        </p>
-    </article>
-
-    <article id="archiwum">
-        <header>
-            <h2>
-                Archiwum
-            </h2>
-        </header>
-        <p>
-            Tu
-            będzie
-            archiwium
-            wpisów
-        </p>
-    </article>
-    <section id="komentarze">
-        <header>
-            <h2>Dodaj komentarz</h2>
-            <span class = "error">Wszystkie pola są wymagane</span>
-            <br><br>
-            <form method="post" action="komentarz.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            Nick:
-            <label>
-                <input type="text" name="nick">
-            </label>
-            <br><br>
-            Email:
-            <label>
-                <input type="email" name="email">
-            </label>
-            <br><br>
-            Treść:
-            <label>
-                <textarea name="tekst" rows="5" cols="40"></textarea>
-            </label>
-            <br><br>
-            <div class="g-recaptcha" data-sitekey="6Lcb3-EZAAAAAJjrPuqtPF6VdYhZgnQ1uo5OkW_d"></div>
-            <input type="submit" name="potwierdz" value="Wyślij komentarz">
-            <br><br>
-        </header>
-    </section>
-</section>
-
-<footer id="stopka">
-    <p>Dawid Kluczewski 2020</p>
-</footer>
+include "footer.php";
+?>
 </body>
 </html>
