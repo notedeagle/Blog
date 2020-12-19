@@ -51,7 +51,7 @@ $responseKeys = json_decode($response,true);
 if($responseKeys["success"]) {
     session_start();
 
-    echo ('<form method="post" action="dodajdobazy.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">');
+    echo ('<form method="post" action="dodajdobazy.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>');
     $_SESSION['tekst'] = $_POST['tekst'];
     $_SESSION['nick'] = $_POST['nick'];
     $_SESSION['tytul'] = $_POST['tytul'];
