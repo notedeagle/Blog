@@ -22,14 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="add adding and deleting comments from database" />
-    <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="">
-      <change afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="add showing comments from database">
+      <change afterPath="$PROJECT_DIR$/logowanie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rejestracja.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/komentarze.php" beforeDir="false" afterPath="$PROJECT_DIR$/komentarze.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pasekBoczny.php" beforeDir="false" afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/walidacja.php" beforeDir="false" afterPath="$PROJECT_DIR$/walidacja.php" afterDir="false" />
     </list>
+    <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +54,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1ix5F2H7IXNAAzbePJ4Yr1VNTVx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,6 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -98,6 +105,8 @@
       <workItem from="1608302197786" duration="119000" />
       <workItem from="1608310558308" duration="13154000" />
       <workItem from="1608379571164" duration="16810000" />
+      <workItem from="1608462574443" duration="174000" />
+      <workItem from="1608468193900" duration="15068000" />
     </task>
     <task id="LOCAL-00001" summary="better form">
       <created>1604762030654</created>
@@ -176,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608408460629</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add showing comments from database">
+      <created>1608462657308</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608462657308</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,10 +218,10 @@
     <MESSAGE value="fix counting points" />
     <MESSAGE value="add simple bbcode editor to add comments" />
     <MESSAGE value="modularization" />
-    <MESSAGE value="add showing comments from database" />
     <MESSAGE value="add connect with database, and adding comment to database" />
     <MESSAGE value="add adding and deleting comments from database" />
-    <option name="LAST_COMMIT_MESSAGE" value="add adding and deleting comments from database" />
+    <MESSAGE value="add showing comments from database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add showing comments from database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

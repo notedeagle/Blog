@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
 <meta name="decription" content="Mój blog">
 <meta name="keywords” content=" blog, lifestyle, Dawid, Kluczewski, informatyka”>
@@ -91,8 +92,38 @@
         <?php } ?>
     </section>
 
-    <?php include 'pasekBoczny.php';?>
+    <?php
+    if (!isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "Najpierw musisz się zalogować!";
+        include "logowanie.php";
+    }
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        include "logowanie.php";
+    }?>
 
+    <div class="content">
+        <?php if (isset($_SESSION['success'])) : ?>
+            <div class="error success" >
+                <h3>
+                    <?php
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
+
+        <?php  if (isset($_SESSION['username'])) : ?>
+            <p>Witaj <strong><?php echo $_SESSION['username']; ?></strong></p>
+            <p> <a href="index.php?logout='1'" style="color: red;">Wyloguj</a> </p>
+        <?php endif ?>
+    </div>
+
+    <?php
+    include 'pasekBoczny.php';
+    ?>
     <?php include 'footer.php';?>
 </body>
 </html>

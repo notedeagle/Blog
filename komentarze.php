@@ -1,7 +1,6 @@
 <section id="komentarze">
     <h2>Wszystkie komentarze:</h2>
     <?php
-    include "connection.php";
     $conn = openConn();
     $sql = "SELECT uzytkownik.nick, komentarz_do_wpisu.tytul, komentarz_do_wpisu.tresc_komentarza FROM uzytkownik 
      INNER JOIN komentarz_do_wpisu ON uzytkownik.IDuzytkownika = komentarz_do_wpisu.IDuzytkownika";
