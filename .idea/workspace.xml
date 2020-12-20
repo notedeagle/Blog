@@ -22,12 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="add simple bbcode editor to add comments">
-      <change afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="add adding and deleting comments from database" />
+    <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="">
+      <change afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pasekBoczny.php" beforeDir="false" afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walidacja.php" beforeDir="false" afterPath="$PROJECT_DIR$/walidacja.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="" />
+      <changelist id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="" />
       <created>1602836298134</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -93,6 +95,9 @@
       <workItem from="1608151353352" duration="1668000" />
       <workItem from="1608206267827" duration="5181000" />
       <workItem from="1608228717698" duration="4106000" />
+      <workItem from="1608302197786" duration="119000" />
+      <workItem from="1608310558308" duration="13154000" />
+      <workItem from="1608379571164" duration="16810000" />
     </task>
     <task id="LOCAL-00001" summary="better form">
       <created>1604762030654</created>
@@ -143,7 +148,35 @@
       <option name="project" value="LOCAL" />
       <updated>1608210215489</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modularization">
+      <created>1608302290547</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608302290547</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add showing comments from database">
+      <created>1608318704039</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608318704039</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add connect with database, and adding comment to database">
+      <created>1608327165736</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608327165736</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add adding and deleting comments from database">
+      <created>1608408460629</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608408460629</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +201,11 @@
     <MESSAGE value="add ultra simple blackjack game" />
     <MESSAGE value="fix counting points" />
     <MESSAGE value="add simple bbcode editor to add comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="add simple bbcode editor to add comments" />
+    <MESSAGE value="modularization" />
+    <MESSAGE value="add showing comments from database" />
+    <MESSAGE value="add connect with database, and adding comment to database" />
+    <MESSAGE value="add adding and deleting comments from database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add adding and deleting comments from database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

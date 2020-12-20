@@ -64,11 +64,12 @@ if($responseKeys["success"]) {
     $trescZmieniona = str_replace($znaczniki, $noweZnaczniki, $tresc) ;
 
     echo ('
-    <p>Nick: ' . $nickname . '</p>
-    <p>Treść komentarza: ' . $trescZmieniona . '</p>
-    <a href="#">Dodaj komentarz</a>
-    <a href="index.php">Edytuj komentarz</a>
-    ');
+     <p>Nick: ' . $nickname . '</p>
+     <p>Tytuł komentarza: ' . $tytulKomentarza . '</p>
+     <p>Treść komentarza: ' . $trescZmieniona . '</p>
+     <a href="dodajdobazy.php">Dodaj komentarz</a>
+     <a href="edytuj.php">Edytuj komentarz</a>
+     ');
 } else {
     echo '<h2>Ić stont bocie</h2>';
 }

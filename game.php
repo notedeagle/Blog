@@ -135,15 +135,8 @@ if (!isset($_GET['akcja'])) {
 ?>
 </section>
 
-<section id="pasekBoczny">
-    <article id="calendar">
-        <p>Data/Godzina: <span id="datetime"></span></p>
-
-        <script>
-            let dt = new Date();
-            document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
-        </script>
-    </article>
+<?php
+include "pasekBoczny.php";
 
 include "footer.php";
 ?>

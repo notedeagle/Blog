@@ -59,25 +59,7 @@
             <br><br>
         </header>
     </section>
-    <section id="komentarze">
-        <header>
-            <h2>Dodaj komentarz</h2>
-            <span class = "error">Wszystkie pola są wymagane</span>
-            <br><br>
-            <form method="post" action="komentarz.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            Nick:
-            <label>
-                <input type="text" name="nick">
-            </label>
-            <br><br>
-            Treść:
-            <label>
-                <textarea name="tekst" rows="5" cols="40"></textarea>
-            </label>
-            <br><br>
-            <div class="g-recaptcha" data-sitekey="6Lcb3-EZAAAAAJjrPuqtPF6VdYhZgnQ1uo5OkW_d"></div>
-            <input type="submit" name="potwierdz" value="Wyślij komentarz">
-            <br><br>
-        </header>
-    </section>
+    <?php
+    include "komentarze.php";
+    ?>
 </section>
