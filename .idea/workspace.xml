@@ -22,15 +22,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="add showing comments from database">
-      <change afterPath="$PROJECT_DIR$/logowanie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rejestracja.php" afterDir="false" />
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="add register and login form with validation and database">
+      <change afterPath="$PROJECT_DIR$/aktywujKonto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edytujUzytkownikow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/naAdministrator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/naUzytkownik.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usunUzytkownika.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uzytkownicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zapiszWybranego.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/komentarze.php" beforeDir="false" afterPath="$PROJECT_DIR$/komentarze.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pasekBoczny.php" beforeDir="false" afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rejestracja.php" beforeDir="false" afterPath="$PROJECT_DIR$/rejestracja.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +112,10 @@
       <workItem from="1608310558308" duration="13154000" />
       <workItem from="1608379571164" duration="16810000" />
       <workItem from="1608462574443" duration="174000" />
-      <workItem from="1608468193900" duration="15068000" />
+      <workItem from="1608468193900" duration="15297000" />
+      <workItem from="1608713472219" duration="1199000" />
+      <workItem from="1609786152161" duration="28000" />
+      <workItem from="1609842343137" duration="14815000" />
     </task>
     <task id="LOCAL-00001" summary="better form">
       <created>1604762030654</created>
@@ -192,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608462657308</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add register and login form with validation and database">
+      <created>1608488557947</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608488557947</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +237,8 @@
     <MESSAGE value="add connect with database, and adding comment to database" />
     <MESSAGE value="add adding and deleting comments from database" />
     <MESSAGE value="add showing comments from database" />
-    <option name="LAST_COMMIT_MESSAGE" value="add showing comments from database" />
+    <MESSAGE value="add register and login form with validation and database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add register and login form with validation and database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

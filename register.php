@@ -36,7 +36,7 @@ if (isset($_POST['zarejestruj'])) {
         }
 
         if ($uzytkownik['email'] === $email) {
-            array_push($errors, "Ten email już istanieje! ");
+            array_push($errors, "Ten email już istnieje! ");
         }
     }
 
@@ -45,8 +45,8 @@ if (isset($_POST['zarejestruj'])) {
         $sql = "INSERT INTO uzytkownik(nick, rola, email, haslo, ostatnioZalogowany) VALUES
                 ('$username', 'Uzytkownik', '$email', '$password', NOW())";
         mysqli_query($conn, $sql);
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "Zostałeś zalogowany!";
+//        $_SESSION['username'] = $username;
+        $_SESSION['success'] = "Zostałeś zarejestrowany! Administrator musi aktywować twoje konto.";
         header('location: index.php');
     } else {
         err($errors);
@@ -67,16 +67,20 @@ if (isset($_POST['zaloguj'])) {
     }
 
     if (count($errors) == 0) {
-        $sql = "SELECT nick, haslo FROM uzytkownik WHERE nick = '$username'";
+        $sql = "SELECT nick, haslo, rola, czy_aktywny FROM uzytkownik WHERE nick = '$username'";
         $update = "UPDATE uzytkownik SET ostatnioZalogowany = NOW() WHERE nick = '$username'";
         $conn->query($update);
         $result = mysqli_query($conn, $sql);
         $uzytkownik = mysqli_fetch_assoc($result);
         $result1 = mysqli_query($conn, $sql);
-        if (mysqli_num_rows($result1) == 1 && password_verify($haslo, $uzytkownik['haslo'])) {
+        if (mysqli_num_rows($result1) == 1 && password_verify($haslo, $uzytkownik['haslo']) && $uzytkownik['czy_aktywny'] == 1) {
             $_SESSION['username'] = $username;
+            $_SESSION['rola'] = $uzytkownik['rola'];
             $_SESSION['success'] = "Zalogowano!";
             header('location: index.php');
+        } else if($uzytkownik['czy_aktywny'] != 1) {
+            array_push($errors, "Konto nieaktywne!");
+            err($errors);
         } else {
             array_push($errors, "Błądny login i/lub hasło!");
             err($errors);

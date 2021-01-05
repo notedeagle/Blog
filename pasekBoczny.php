@@ -62,7 +62,20 @@
 <!--            <br><br>-->
 <!--        </header>-->
 <!--    </section>-->
-    <?php
-    include "komentarze.php";
-    ?>
+    <article>
+        <?php
+        include "komentarze.php"
+        ?>
+    </article>
+    <article>
+        <?php
+        if (isset($_SESSION['username'])) :
+        include "uzytkownicy.php";
+        endif;
+        if (isset($_SESSION['username']) && $_SESSION['rola'] == 'Administrator') : ?>
+            <a href="edytujUzytkownikow.php">Zarządzaj użytkownikami</a>
+        <?php
+        endif;
+        ?>
+    </article>
 </section>

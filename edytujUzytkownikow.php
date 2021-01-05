@@ -18,22 +18,9 @@
     <p>Tu jest naglowek</p>
 </header>
 
-<nav id="menu">
-    <ul>
-        <li><a class="active" href="index.php">Strona główna</a></li>
-        <li><a href="#">Wpisy</a> </li>
-        <li><a href="#">Edukacja</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="game.php">Gra</a></li>
-        <li style="float:right"><a href="#">O mnie</a></li>
-        <?php  if (!isset($_SESSION['username'])) : ?>
-            <li style="float: right"><a href="index.php">Zaloguj się</a> </li>
-        <?php endif ?>
-    </ul>
-</nav>
+<?php include 'menu.php';?>
 
 <?php
-
 if (isset($_GET['str'])) {
     $nr_str = $_GET['str'];
 }
@@ -106,74 +93,13 @@ if (!isset($nr_str)) {
 
 <?php
 if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "Najpierw musisz się zalogować!"; ?>
-    <section id="rejestrajca">
-    <header>
-        <h2>Zarejestruj się</h2>
-        <span class = "error">Wszystkie pola są wymagane</span>
-        <br><br>
-        <form method="post" action="register.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    Nick:
-        <label>
-            <input type="text" name="nick">
-        </label>
-        <br><br>
-    E-mail:
-        <label>
-            <input type="email" name="email">
-        </label>
-        <br><br>
-    Hasło:
-        <label>
-            <input type="password" name="haslo1">
-        </label>
-        <br><br>
-    Powtórz hasło:
-        <label>
-            <input type="password" name="haslo2">
-        </label>
-        <br><br>
-        <input type="submit" name="zarejestruj" value="Zarejestruj się">
-        <br><br>
-    </header>
-</section>
-<?php
+    $_SESSION['msg'] = "Najpierw musisz się zalogować!";
+    include "logowanie.php";
 }
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    $_SESSION['msg'] = "Najpierw musisz się zalogować!"; ?>
-    <section id="rejestrajca">
-        <header>
-            <h2>Zarejestruj się</h2>
-            <span class = "error">Wszystkie pola są wymagane</span>
-            <br><br>
-            <form method="post" action="register.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            Nick:
-            <label>
-                <input type="text" name="nick">
-            </label>
-            <br><br>
-            E-mail:
-            <label>
-                <input type="email" name="email">
-            </label>
-            <br><br>
-            Hasło:
-            <label>
-                <input type="password" name="haslo1">
-            </label>
-            <br><br>
-            Powtórz hasło:
-            <label>
-                <input type="password" name="haslo2">
-            </label>
-            <br><br>
-            <input type="submit" name="zarejestruj" value="Zarejestruj się">
-            <br><br>
-        </header>
-    </section>
-    <?php
+    include "logowanie.php";
 }?>
 
 <div class="content">
@@ -193,21 +119,62 @@ if (isset($_GET['logout'])) {
         <p> <a href="index.php?logout='1'" style="color: red;">Wyloguj</a> </p>
     <?php endif ?>
 </div>
+<section id="pasekBoczny">
+    <article id="calendar">
+        <p>Data/Godzina: <span id="datetime"></span></p>
 
-<?php
-include 'pasekBoczny.php';
-?>
+        <script>
+            let dt = new Date();
+            document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+        </script>
+    </article>
+
+    <article id="link">
+        <header>
+            <h2>Tu mnie znajdziesz</h2>
+        </header>
+        <p>
+            <a href="#">Github</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">E-mail</a>
+        </p>
+    </article>
+
+    <article id="archiwum">
+        <header>
+            <h2>
+                Archiwum
+            </h2>
+        </header>
+        <p>
+            Tu
+            będzie
+            archiwium
+            wpisów
+        </p>
+    </article>
+    <p>Wybierz użytkownika do edycji:</p>
+    <?php
+    unset($_SESSION['uzytkownik']);
+    include "connection.php";
+    $conn = openConn();
+    $sql = "SELECT nick, rola FROM uzytkownik";
+    $result = mysqli_query($conn, $sql);
+    ?>
+    <form action="zapiszWybranego.php" method="post">
+        <select name="somename">
+            <?php while($row1 = mysqli_fetch_array($result)):;?>
+                <option value="<?php echo $row1[0];?>"><?php echo $row1[0];?> - <?php echo $row1[1]?></option>
+            <?php
+            endwhile; ?>
+        </select>
+        <input type="submit">
+    </form>
+</section>
 <?php include 'footer.php';?>
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 
