@@ -6,7 +6,7 @@ $errors = array();
 
 include "connection.php";
 
-if (isset($_POST['zarejestruj'])) {
+if(isset($_POST['zarejestruj'])) {
     $conn = openConn();
     $username = mysqli_real_escape_string($conn, $_POST['nick']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -54,7 +54,7 @@ if (isset($_POST['zarejestruj'])) {
     $conn->close();
 }
 
-if (isset($_POST['zaloguj'])) {
+if(isset($_POST['zaloguj'])) {
     $conn = openConn();
     $username = mysqli_real_escape_string($conn, $_POST['nick']);
     $haslo = mysqli_real_escape_string($conn, $_POST['haslo']);
@@ -85,6 +85,37 @@ if (isset($_POST['zaloguj'])) {
             array_push($errors, "Błądny login i/lub hasło!");
             err($errors);
         }
+    } else {
+        err($errors);
+    }
+    $conn->close();
+}
+
+if(isset($_POST['zmienHaslo'])) {
+    $conn = openConn();
+    $username = $_SESSION['uzytkownik'];
+    $haslo1 = $_POST['pass1'];
+    $haslo2 = $_POST['pass2'];
+
+
+    if (empty($username)) {
+        array_push($errors, "Musisz podać nazwę użytkownika! ");
+    }
+    if (empty($haslo1)) {
+        array_push($errors, "Musisz podać hasło! ");
+    }
+    if ($haslo1 !== $haslo2) {
+        array_push($errors, "Hasła są różne! ");
+    }
+
+    if (count($errors) == 0) {
+        $password = password_hash($haslo1, PASSWORD_BCRYPT);
+        $update = "UPDATE uzytkownik SET haslo = '$password' WHERE nick = '$username'";
+        $conn->query($update);
+        echo '<script>
+        alert("Hasło zostało zmienione!");
+        window.location.href="index.php";
+        </script>';
     } else {
         err($errors);
     }

@@ -117,16 +117,12 @@
         <?php  if (isset($_SESSION['username'])) : ?>
             <p>Witaj <strong><?php echo $_SESSION['username']; ?></strong></p>
             <p> <a href="index.php?logout='1'" style="color: red;">Wyloguj</a> </p>
-        <?php endif ?>
+        <?php
+        endif ?>
     </div>
     <?php
-
     include 'pasekBoczny.php';
-//    if (isset($_SESSION['username'])) :
-//        include "uzytkownicy.php";
-//    endif;
-    ?>
-    <?php include 'footer.php';?>
+    include 'footer.php';?>
 </body>
 </html>
 
