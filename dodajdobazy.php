@@ -3,15 +3,15 @@ session_start();
 
 include "connection.php";
 
-$nickname = $_SESSION['nick'];
+$nickname = $_SESSION['username'];
 $tresc = $_SESSION['tekst'];
 $tytulKomentarza = $_SESSION['tytul'];
 
 $conn = openConn();
 
-$sql = "INSERT INTO  komentarz_do_wpisu (IDuzytkownika, IDwpisu, tytul, dataStworzenia, tresc_komentarza)
+$sql = "INSERT INTO  komentarz_do_wpisu (IDuzytkownika, IDwpisu, tytul, dataStworzenia, dataModyfikacji, tresc_komentarza)
 VALUES((SELECT IDuzytkownika FROM uzytkownik WHERE nick = '$nickname'), (SELECT IDwpisu FROM wpis WHERE IDwpisu = 2),
-       '$tytulKomentarza', NOW(), '$tresc')";
+       '$tytulKomentarza', NOW(), NOW(), '$tresc')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Komentarz dodany!";

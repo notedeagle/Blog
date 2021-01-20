@@ -1,18 +1,8 @@
 <?php
 
-$nick = $tytul = $tekst = "";
+$tytul = $tekst = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["nick"])) {
-        echo "<span style=\"color:red;\">Nick jest wymagany<br></span>";
-    } else {
-        $nick = input_data($_POST["nick"]);
-
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $nick)) {
-            echo "<span style=\"color:red;\">Nick może się wkładać tylko z liter i cyfr<br></span>";
-
-        }
-    }
 
     if (empty($_POST["tytul"])) {
         echo "<span style=\"color:red;\">Tytuł komentarza jest wymagany<br></span>";
@@ -53,9 +43,9 @@ if($responseKeys["success"]) {
 
     echo ('<form method="post" action="dodajdobazy.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>');
     $_SESSION['tekst'] = $_POST['tekst'];
-    $_SESSION['nick'] = $_POST['nick'];
+//    $_SESSION['nick'] = $_POST['nick'];
     $_SESSION['tytul'] = $_POST['tytul'];
-    $nickname = $_SESSION['nick'];
+    $nickname = $_SESSION['username'];
     $tresc = $_SESSION['tekst'];
     $tytulKomentarza = $_SESSION['tytul'];
     $znaczniki = array('[b]' ,'[/b]', '[i]','[/i]', '[u]','[/u]','[quote]','[/quote]','[s]', '[/s]');
