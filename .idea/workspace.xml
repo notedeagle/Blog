@@ -22,16 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="added option to change password">
-      <change afterPath="$PROJECT_DIR$/zadanie1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie1dalej.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2dalej.php" afterDir="false" />
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="Added display of comments from a selected date">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dodajdobazy.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodajdobazy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/komentarze.php" beforeDir="false" afterPath="$PROJECT_DIR$/komentarze.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pasekBoczny.php" beforeDir="false" afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/walidacja.php" beforeDir="false" afterPath="$PROJECT_DIR$/walidacja.php" afterDir="false" />
     </list>
     <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="" />
     <option name="SHOW_DIALOG" value="false" />

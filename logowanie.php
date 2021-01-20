@@ -1,5 +1,5 @@
 <section id="logowanie">
-    <header>
+    <header>>
         <h2>Zaloguj się</h2>
         <span class = "error">Wszystkie pola są wymagane</span>
         <br><br>
@@ -16,5 +16,6 @@
         <br><br>
         <input type="submit" name="zaloguj" value="Zaloguj">
         <br><br>
+        </form>
     </header>
 </section>
