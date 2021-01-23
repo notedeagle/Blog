@@ -1,9 +1,9 @@
 <section id="logowanie">
-    <header>>
+    <header>
         <h2>Zaloguj się</h2>
         <span class = "error">Wszystkie pola są wymagane</span>
         <br><br>
-        <form method="post" action="register.php""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form method="post" action="register.php">
         Nick:
         <label>
             <input type="text" name="nick">

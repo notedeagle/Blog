@@ -17,7 +17,7 @@
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo "Nick: " . $row["nick"]. "<br>" . "Tytul komentarza: " . $row["tytul"]. "<br>" .
-                "Treść komentarza: " . $row["tresc_komentarza"]. "<br>" . "Data dodania komenatarza: " .
+                "Treść komentarza: " . $row["tresc_komentarza"]. "<br>" . "Data dodania komentarza: " .
                 $row["dataModyfikacji"] . "<br>" . "<br>";
         }
     } else {

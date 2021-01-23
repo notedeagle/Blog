@@ -47,10 +47,18 @@
     float: left;
     width: 80%;
     box-sizing: border-box;
+    margin: 0 -1px 0 0;
+}
+
+#posty a {
+    color: white;
+    text-decoration: none;
 }
 
 #wpis article {
     border-bottom: 1px solid white;
+    clear: both;
+    margin: 0 -1px 0 0;
 }
 
 #pasekBoczny {
@@ -58,11 +66,27 @@
     width: 20%;
     background-color: grey;
     border-left: 1px solid white;
-    box-sizing: border-box;
+    margin: 0 -1px 0 0;
+}
+
+#login {
+    float: right;
+    border-bottom: 1px solid white;
+    width: 20%;
+    background-color: grey;
+    margin: 0 -1px 0 0;
 }
 
 #pasekBoczny article {
     border-bottom: 1px solid white;
+}
+
+#pasekBoczny section {
+    border-bottom: 1px solid white;
+}
+
+#pasekBoczny #calendar {
+    clear: both;
 }
 
 #stopka {
@@ -114,6 +138,7 @@
     text-decoration: none;
     border: 1px solid white;
 }
+
 
 
 

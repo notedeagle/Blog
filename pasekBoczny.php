@@ -1,6 +1,3 @@
-<?php include "connection.php";
-?>
-
 <section id="pasekBoczny">
     <article id="calendar">
         <p>Data/Godzina: <span id="datetime"></span></p>
@@ -23,20 +20,6 @@
         </p>
     </article>
 
-    <article id="archiwum">
-        <header>
-            <h2>
-                Archiwum
-            </h2>
-        </header>
-        <p>
-            Tu
-            będzie
-            archiwium
-            wpisów
-        </p>
-    </article>
-
     <?php
     if(isset($_SESSION['username'])) { ?>
         <section id="dodajKomentarz">
@@ -45,10 +28,6 @@
                 <span class = "error">Wszystkie pola są wymagane</span>
                 <br>
                 <form method="post" action="walidacja.php">
-<!--                Nick:-->
-<!--                <label>-->
-<!--                    <input type="text" name="nick">-->
-<!--                </label>-->
                 <br><br>
                 Tytuł komentarza: <br>
                 <label>

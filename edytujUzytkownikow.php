@@ -18,92 +18,46 @@
     <p>Tu jest naglowek</p>
 </header>
 
-<?php include 'menu.php';?>
+<?php include 'menu.php';
+include "connection.php";
+?>
 
 <?php
 if (isset($_GET['str'])) {
     $nr_str = $_GET['str'];
-}
-
-if (!isset($nr_str)) {
-    echo ('<a href="index.php?str=1">Strona 2</a>');
-} else if (isset($nr_str)) {
-    if ($nr_str == '1') {
-        echo ('<a href="index.php?str=2">Strona 2</a>');?>
-        <section id="wpis">
-            <article>
-                <header>
-                    <h2>Tu coś kiedyś będzie :)</h2>
-                </header>
-                <section>
-                    <p>
-                        Tu też coś kiedyś będzie
-                    </p>
-                </section>
-            </article>
-        </section>
-        <?php
-    } else {
-        echo ('<a href="index.php?str=3">Strona 3</a>');?>
-        <section id="wpis">
-            <article>
-                <header>
-                    <h2>Tu też coś kiedyś będzie :)</h2>
-                </header>
-                <section>
-                    <p>
-                        Tu też coś kiedyś będzie... chyba
-                    </p>
-                </section>
-            </article>
-        </section>
-        <?php
-    }
-}
-?>
+} ?>
 
 <section id="wpis">
     <?php
-
-    $tresc = 'Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst
-                    Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst
-                    Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst Jakiś tekst';
-
-    $tytul = array("Tytul 1", "Tytul 2", "Tytul 3", "Tytul 4", "Tytul 5", "Tytul 6", "Tytul 7", "Tytul 8");
-
-    foreach ($tytul as $i) { ?>
-        <article>
-            <header>
-                <h2>
-                    <?php
-                    echo "$i";
-                    ?>
-                </h2>
-            </header>
-            <section>
-                <p>
-                    <?php
-                    echo $tresc;
-                    ?>
-                </p>
-            </section>
-        </article>
-    <?php } ?>
+    if (!isset($nr_str)) {
+        include "posty.php";
+        echo ('<a href="index.php?str=1">Strona 2</a>');
+    } else if (isset($nr_str)) {
+        if ($nr_str == '1') {
+//                    include "posty.php";
+            echo ('<a href="index.php?str=2">Strona 3</a>');
+        } else {
+            echo ('<a href="index.php?str=3">Strona 4</a>');
+        }
+    }
+    ?>
 </section>
 
-<?php
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "Najpierw musisz się zalogować!";
-    include "logowanie.php";
-}
-if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['username']);
-    include "logowanie.php";
-}?>
 
-<div class="content">
-    <?php if (isset($_SESSION['success'])) : ?>
+<section id="login">
+    <?php
+
+    if (!isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "Najpierw musisz się zalogować!";
+        include "logowanie.php";
+    }
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        include "logowanie.php";
+    }
+
+    if (isset($_SESSION['success'])) : ?>
         <div class="error success" >
             <h3>
                 <?php
@@ -117,8 +71,12 @@ if (isset($_GET['logout'])) {
     <?php  if (isset($_SESSION['username'])) : ?>
         <p>Witaj <strong><?php echo $_SESSION['username']; ?></strong></p>
         <p> <a href="index.php?logout='1'" style="color: red;">Wyloguj</a> </p>
-    <?php endif ?>
-</div>
+    <?php
+    endif;
+
+    ?>
+</section>
+
 <section id="pasekBoczny">
     <article id="calendar">
         <p>Data/Godzina: <span id="datetime"></span></p>
@@ -141,23 +99,43 @@ if (isset($_GET['logout'])) {
         </p>
     </article>
 
-    <article id="archiwum">
-        <header>
-            <h2>
-                Archiwum
-            </h2>
-        </header>
-        <p>
-            Tu
-            będzie
-            archiwium
-            wpisów
-        </p>
+    <?php
+    if(isset($_SESSION['username'])) { ?>
+        <section id="dodajKomentarz">
+            <header>
+                <h2>Dodaj komentarz</h2>
+                <span class = "error">Wszystkie pola są wymagane</span>
+                <br>
+                <form method="post" action="walidacja.php">
+                    <br><br>
+                    Tytuł komentarza: <br>
+                    <label>
+                        <input type="text" name="tytul">
+                    </label>
+                    <br><br>
+                    Treść: <br>
+                    <label>
+                        <textarea name="tekst" rows="5" cols="40"></textarea>
+                    </label>
+                    <br><br>
+                    <div class="g-recaptcha" data-sitekey="6Lcb3-EZAAAAAJjrPuqtPF6VdYhZgnQ1uo5OkW_d"></div>
+                    <input type="submit" name="potwierdz" value="Wyślij komentarz">
+                    <br><br>
+                </form>
+            </header>
+        </section>
+        <?php
+    }
+    ?>
+    <article>
+        <?php
+        include "komentarze.php"
+        ?>
     </article>
+
     <p>Wybierz użytkownika do edycji:</p>
     <?php
     unset($_SESSION['uzytkownik']);
-    include "connection.php";
     $conn = openConn();
     $sql = "SELECT nick, rola FROM uzytkownik";
     $result = mysqli_query($conn, $sql);
@@ -169,12 +147,18 @@ if (isset($_GET['logout'])) {
             <?php
             endwhile; ?>
         </select>
-        <input type="submit">
+        <input type="submit" value="Dalej">
     </form>
+
 </section>
-<?php include 'footer.php';?>
+<?php
+include 'footer.php';?>
+
 </body>
 </html>
+
+
+
 
 
 
