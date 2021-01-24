@@ -6,11 +6,12 @@ include "connection.php";
 $nickname = $_SESSION['username'];
 $tresc = $_SESSION['tekst'];
 $tytulKomentarza = $_SESSION['tytul'];
+$IDwpisu = $_SESSION['idWpisu'];
 
 $conn = openConn();
 
 $sql = "INSERT INTO  komentarz_do_wpisu (IDuzytkownika, IDwpisu, tytul, dataStworzenia, dataModyfikacji, tresc_komentarza)
-VALUES((SELECT IDuzytkownika FROM uzytkownik WHERE nick = '$nickname'), (SELECT IDwpisu FROM wpis WHERE IDwpisu = 2),
+VALUES((SELECT IDuzytkownika FROM uzytkownik WHERE nick = '$nickname'), (SELECT IDwpisu FROM wpis WHERE IDwpisu = '$IDwpisu'),
        '$tytulKomentarza', NOW(), NOW(), '$tresc')";
 
 if ($conn->query($sql) === TRUE) {

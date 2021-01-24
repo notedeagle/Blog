@@ -20,63 +20,11 @@
 
     <?php include 'menu.php';
     include "connection.php";
-    ?>
-
-    <?php
-    if (isset($_GET['str'])) {
-        $nr_str = $_GET['str'];
-    } ?>
-
-        <section id="wpis">
-            <?php
-            if (!isset($nr_str)) {
-                include "posty.php";
-                echo ('<a href="index.php?str=1">Strona 2</a>');
-            } else if (isset($nr_str)) {
-                if ($nr_str == '1') {
-                    echo ('<a href="index.php?str=2">Strona 3</a>');
-                } else {
-                    echo ('<a href="index.php?str=3">Strona 4</a>');
-                }
-            }
-            ?>
-        </section>
-
-
-    <section id="login">
-        <?php
-
-        if (!isset($_SESSION['username'])) {
-            $_SESSION['msg'] = "Najpierw musisz się zalogować!";
-            include "logowanie.php";
-        }
-        if (isset($_GET['logout'])) {
-            session_destroy();
-            unset($_SESSION['username']);
-            include "logowanie.php";
-        }
-
-        if (isset($_SESSION['success'])) : ?>
-            <div class="error success" >
-                <h3>
-                    <?php
-                    echo $_SESSION['success'];
-                    unset($_SESSION['success']);
-                    ?>
-                </h3>
-            </div>
-        <?php endif ?>
-
-        <?php  if (isset($_SESSION['username'])) : ?>
-            <p>Witaj <strong><?php echo $_SESSION['username']; ?></strong></p>
-            <p> <a href="index.php?logout='1'" style="color: red;">Wyloguj</a> </p>
-        <?php
-        endif;
-
-        ?>
-    </section>
-
-    <?php
+    if(isset($_GET['contact'])) {
+        include "kontakt.php";
+    } else {
+        include "posty.php";
+    }
     include 'pasekBoczny.php';
     include 'footer.php';?>
 </body>

@@ -1,8 +1,14 @@
 <?php
 
-$tytul = $tekst = "";
+$nick = $tytul = $tekst = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["nick"]) && isset($_SESSION['username'])) {
+        echo "<span style=\"color:red;\">Nick jest wymagany<br></span>";
+    } else {
+        $nick = input_data($_POST["tytul"]);
+    }
+
 
     if (empty($_POST["tytul"])) {
         echo "<span style=\"color:red;\">Tytuł komentarza jest wymagany<br></span>";

@@ -8,7 +8,7 @@ include "connection.php";
 
 if(isset($_POST['zarejestruj'])) {
     $conn = openConn();
-    $username = mysqli_real_escape_string($conn, $_POST['nick']);
+    $username = mysqli_real_escape_string($conn, $_POST['nickname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $haslo1 = mysqli_real_escape_string($conn, $_POST['haslo1']);
     $haslo2 = mysqli_real_escape_string($conn, $_POST['haslo2']);
@@ -40,7 +40,20 @@ if(isset($_POST['zarejestruj'])) {
         }
     }
 
-    if (count($errors) == 0) {
+    if(isset($_POST['g-recaptcha-response'])){
+        $captcha=$_POST['g-recaptcha-response'];
+    }
+    if(!$captcha){
+        array_push($errors, "Sprawdź captche! ");
+    }
+
+    $secretKey = "6Lcb3-EZAAAAACDOrPSwLbNoGXlysdImMDrNJ2TW";
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+    $response = file_get_contents($url);
+    $responseKeys = json_decode($response,true);
+
+    if (count($errors) == 0 && $responseKeys['success']) {
         $password = password_hash($haslo1, PASSWORD_BCRYPT);
         $sql = "INSERT INTO uzytkownik(nick, rola, email, haslo, ostatnioZalogowany) VALUES
                 ('$username', 'Uzytkownik', '$email', '$password', NOW())";

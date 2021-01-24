@@ -22,134 +22,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="Added display of comments from a selected date">
-      <change afterPath="$PROJECT_DIR$/development/formats/bbcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/formats/xhtml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/icons/material.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/icons/monocons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/jquery.sceditor.bbcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/jquery.sceditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/jquery.sceditor.xhtml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/autosave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/autoyoutube.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/dragdrop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/plaintext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/strictbbcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/undo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/plugins/v1compat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/sceditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/content/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/defaultdark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/famfamfam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/modern.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/office-toolbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/office.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/development/themes/square.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dodajPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dodajPostDoBazy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/alien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/angel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/angry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/blink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/blush.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/cheerful.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/cool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/credits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/cwy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/devil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/dizzy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/ermm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/face.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/getlost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/grin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/happy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/kissing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/laughing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/ninja.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/pinch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/pouty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/sad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/shocked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/sick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/sideways.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/silly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/sleeping.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/tongue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/unsure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/w00t.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/wassat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/whistling.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/wink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emoticons/wub.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/en-US.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/formats/bbcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/formats/xhtml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/icons/material.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/icons/monocons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/jquery.sceditor.bbcode.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/jquery.sceditor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/jquery.sceditor.xhtml.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/autosave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/autoyoutube.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/dragdrop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/plaintext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/strictbbcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/undo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/plugins/v1compat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/sceditor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/content/default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/defaultdark.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/famfamfam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/modern.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/office-toolbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/office.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minified/themes/square.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posty.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usunPost.php" afterDir="false" />
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="Adding and deleting post and a few tweaks">
+      <change afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wyslano.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edytujUzytkownikow.php" beforeDir="false" afterPath="$PROJECT_DIR$/edytujUzytkownikow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodajdobazy.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodajdobazy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/komentarze.php" beforeDir="false" afterPath="$PROJECT_DIR$/komentarze.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logowanie.php" beforeDir="false" afterPath="$PROJECT_DIR$/logowanie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pasekBoczny.php" beforeDir="false" afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posty.php" beforeDir="false" afterPath="$PROJECT_DIR$/posty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rejestracja.php" beforeDir="false" afterPath="$PROJECT_DIR$/rejestracja.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usunKomentarz.php" beforeDir="false" afterPath="$PROJECT_DIR$/usunKomentarz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usunzbazy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/walidacja.php" beforeDir="false" afterPath="$PROJECT_DIR$/walidacja.php" afterDir="false" />
     </list>
     <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +135,10 @@
       <workItem from="1611176170301" duration="145000" />
       <workItem from="1611256976730" duration="165000" />
       <workItem from="1611259423456" duration="991000" />
-      <workItem from="1611334367793" duration="17146000" />
+      <workItem from="1611334367793" duration="17587000" />
+      <workItem from="1611422947758" duration="684000" />
+      <workItem from="1611427682227" duration="1087000" />
+      <workItem from="1611431760040" duration="16622000" />
     </task>
     <task id="LOCAL-00001" summary="better form">
       <created>1604762030654</created>
@@ -361,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611176303003</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Adding and deleting post and a few tweaks">
+      <created>1611412672284</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611412672284</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +292,8 @@
     <MESSAGE value="added user management and access levels" />
     <MESSAGE value="added option to change password" />
     <MESSAGE value="Added display of comments from a selected date" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added display of comments from a selected date" />
+    <MESSAGE value="Adding and deleting post and a few tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding and deleting post and a few tweaks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -48,17 +48,33 @@
     width: 80%;
     box-sizing: border-box;
     margin: 0 -1px 0 0;
+    display: inline-block;
+}
+
+#wpis article {
+    border-bottom: 1px solid white;
+}
+
+#wpis a {
+    font-weight:bold;
+    font-size:18px;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border:1px solid black;
+    margin: 0 -1px 0 0;
+}
+#wpis a.active {
+    background-color: #292929;
+}
+#wpis a:hover:not(.active) {
+    background-color: gray;
 }
 
 #posty a {
     color: white;
     text-decoration: none;
-}
-
-#wpis article {
-    border-bottom: 1px solid white;
-    clear: both;
-    margin: 0 -1px 0 0;
 }
 
 #pasekBoczny {
@@ -69,24 +85,12 @@
     margin: 0 -1px 0 0;
 }
 
-#login {
-    float: right;
-    border-bottom: 1px solid white;
-    width: 20%;
-    background-color: grey;
-    margin: 0 -1px 0 0;
-}
-
 #pasekBoczny article {
     border-bottom: 1px solid white;
 }
 
 #pasekBoczny section {
     border-bottom: 1px solid white;
-}
-
-#pasekBoczny #calendar {
-    clear: both;
 }
 
 #stopka {
@@ -138,6 +142,8 @@
     text-decoration: none;
     border: 1px solid white;
 }
+
+
 
 
 
