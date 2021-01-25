@@ -128,6 +128,7 @@
         if (isset($_SESSION['username']) && $_SESSION['rola'] == 'Administrator') : ?>
             <a href="edytujUzytkownikow.php">Zarządzaj użytkownikami</a>
         <?php
+        include "wiadomosci.php";
         endif;
         ?>
     </article>

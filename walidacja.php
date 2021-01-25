@@ -51,7 +51,14 @@ if($responseKeys["success"]) {
     $_SESSION['tekst'] = $_POST['tekst'];
 //    $_SESSION['nick'] = $_POST['nick'];
     $_SESSION['tytul'] = $_POST['tytul'];
-    $nickname = $_SESSION['username'];
+    if(isset($_SESSION['username'])) {
+        $_SESSION['nick'] = $_SESSION['username'];
+        $nickname = $_SESSION['username'];
+    } else {
+        $_SESSION['nick'] = $_POST['nick'];
+        $nickname = $_POST['nick'];
+    }
+
     $tresc = $_SESSION['tekst'];
     $tytulKomentarza = $_SESSION['tytul'];
     $znaczniki = array('[b]' ,'[/b]', '[i]','[/i]', '[u]','[/u]','[quote]','[/quote]','[s]', '[/s]');

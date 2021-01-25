@@ -22,21 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="Adding and deleting post and a few tweaks">
-      <change afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wyslano.php" afterDir="false" />
+    <list default="true" id="55bb35fd-c1c1-4b13-8563-cd97598f468b" name="Default Changelist" comment="Lots of fixes">
+      <change afterPath="$PROJECT_DIR$/dodajKontakt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiadomosci.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dodajdobazy.php" beforeDir="false" afterPath="$PROJECT_DIR$/dodajdobazy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/komentarze.php" beforeDir="false" afterPath="$PROJECT_DIR$/komentarze.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pasekBoczny.php" beforeDir="false" afterPath="$PROJECT_DIR$/pasekBoczny.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posty.php" beforeDir="false" afterPath="$PROJECT_DIR$/posty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rejestracja.php" beforeDir="false" afterPath="$PROJECT_DIR$/rejestracja.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usunKomentarz.php" beforeDir="false" afterPath="$PROJECT_DIR$/usunKomentarz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usunzbazy.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/walidacja.php" beforeDir="false" afterPath="$PROJECT_DIR$/walidacja.php" afterDir="false" />
     </list>
     <list id="3ade3fbc-6088-45ff-af48-d87f0d87b1e4" name="add showing comments from database" comment="" />
@@ -138,7 +130,12 @@
       <workItem from="1611334367793" duration="17587000" />
       <workItem from="1611422947758" duration="684000" />
       <workItem from="1611427682227" duration="1087000" />
-      <workItem from="1611431760040" duration="16622000" />
+      <workItem from="1611431760040" duration="17354000" />
+      <workItem from="1611518869349" duration="109000" />
+      <workItem from="1611519169098" duration="11000" />
+      <workItem from="1611573912002" duration="9000" />
+      <workItem from="1611582897907" duration="3180000" />
+      <workItem from="1611586734597" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="better form">
       <created>1604762030654</created>
@@ -259,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611412672284</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Lots of fixes">
+      <created>1611506609310</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611506609310</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +297,8 @@
     <MESSAGE value="added option to change password" />
     <MESSAGE value="Added display of comments from a selected date" />
     <MESSAGE value="Adding and deleting post and a few tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding and deleting post and a few tweaks" />
+    <MESSAGE value="Lots of fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lots of fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

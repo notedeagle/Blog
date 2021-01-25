@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action="#" method="post" id="kontakt">
+<form action="dodajKontakt.php" method="post" id="kontakt">
     <h2>Formularz kontaktowy</h2>
     <p>
         <label>Imię:</label>
@@ -12,12 +12,11 @@
     </p>
     <p>
         <label>Wiadomość:</label>
-        <textarea name="message"></textarea>
+        <textarea name="tresc"></textarea>
     </p>
 
     <p>
         <input type="submit" value="Wyślij"/>
     </p>
-</form>
 </body>
 </html>

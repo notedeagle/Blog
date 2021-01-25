@@ -3,7 +3,7 @@ session_start();
 
 include "connection.php";
 
-$nickname = $_SESSION['username'];
+$nickname = $_SESSION['nick'];
 $tresc = $_SESSION['tekst'];
 $tytulKomentarza = $_SESSION['tytul'];
 $IDwpisu = $_SESSION['idWpisu'];
